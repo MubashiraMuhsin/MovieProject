@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+<!--    <div class="container">-->
+<!--    <div class="row">-->
+
+<!--        <div class="col-md-1">-->
+<!--            <div class="card" style="width: 60rem;">-->
+<!--                 <h3> Add a new movie </h3>-->
+<!--    <h5>Enter movie name <input type="text" name="movie_name" placeholder=""></h5><br><br>-->
+<!--    <h5>Add movie description <input type="text" name="movie_desc" placeholder=""></h5><br><br>-->
+<!--    <h5>Enter the release year <input type="text" name="year" placeholder=""></h5><br><br>-->
+<!--    <h5>Add poster   : <input type="file" name="img" ></h5><br><br>-->
+<!--    <h5><input type="submit"></h5>-->
+<!-- </div>-->
+<!--</div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+    <section class="vh-100" style="background-color: #2779e2;">
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-xl-9">
+
+        <h3 class="text-white mb-4">Add a new movie</h3>
+
+        <div class="card" style="border-radius: 15px;">
+          <div class="card-body">
+
+            <div class="row align-items-center pt-4 pb-3">
+              <div class="col-md-3 ps-5">
+
+                <h6 class="mb-0">Enter movie name</h6>
+
+              </div>
+              <div class="col-md-9 pe-5">
+
+                <input type="text" class="form-control form-control-lg" name="movie_name" placeholder="">
+
+              </div>
+            </div>
+
+            <div class="row align-items-center pt-4 pb-3">
+              <div class="col-md-3 ps-5">
+
+                <h6 class="mb-0">Enter release year</h6>
+
+              </div>
+              <div class="col-md-9 pe-5">
+              <input class="form-control form-control-lg" type="text" name="year" placeholder="">
+
+              </div>
+            </div>
+
+            <div class="row align-items-center py-3">
+              <div class="col-md-3 ps-5">
+
+                <h6 class="mb-0">Add movie description </h6>
+
+              </div>
+              <div class="col-md-9 pe-5">
+
+                <textarea class="form-control" rows="3" name="movie_desc" placeholder=""></textarea>
+
+              </div>
+            </div>
+
+            <hr class="mx-n3">
+
+            <div class="row align-items-center py-3">
+              <div class="col-md-3 ps-5">
+
+                <h6 class="mb-0">Upload poster</h6>
+
+              </div>
+              <div class="col-md-9 pe-5">
+
+                <input class="form-control form-control-lg" id="formFileLg" type="file" name="img" >
+                <div class="small text-muted mt-2"></div>
+
+              </div>
+            </div>
+
+            <hr class="mx-n3">
+
+            <div class="px-5 py-4">
+              <button type="submit" class="btn btn-primary btn-lg">Add Movie</button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</form>
+
+{% endblock %}
